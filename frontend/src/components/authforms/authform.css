@@ -1,0 +1,312 @@
+.session-form {
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(230, 232, 217, 0.3);
+}
+
+.signup-background {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(215, 228, 230, 0.405);
+    border-radius: 10%;
+    margin-top: 10%;
+}
+
+.sign-up-form {
+    margin-top: 4%;
+    font-size: 40px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.first-name-container {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-fname{
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    margin-top: 8.5%;
+}
+
+.signup-fname-box{
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 6%;
+    margin-left: 4%;
+    box-shadow: none;
+    height: 2em;
+    border: 1;
+    border-radius: 6px;
+    border-color: transparent;
+    background-color: white;
+}
+
+.last-name-container {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-lname{
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 4.5%;
+}
+
+.signup-lname-box{
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 2%;
+    margin-left: 4%;
+    box-shadow: none;
+    height: 2em;
+    border: 1;
+    border-radius: 6px;
+    border-color: transparent;
+    background-color: white;
+}
+
+.signup-username-container {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-username-box {
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 2%;
+    margin-left: 4%;
+    box-shadow: none;
+    height: 2em;
+    border: 1;
+    border-radius: 6px;
+    border-color: transparent;
+    background-color: white;
+
+}
+
+.signup-username {
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 4.5%;
+}
+
+.signup-password-container {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-password {
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 4.5%;
+
+}
+
+.signup-password-box {
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 2%;
+    margin-left: 4%;
+    box-shadow: none;
+    height: 2em;
+    border: 1;
+    border-radius: 6px;
+    border-color: transparent;
+    background-color: white;
+}
+
+.signup-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-button {
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 8%;
+    border-radius: 10%;
+    text-align: center;
+    border-color: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.signup-button:active {
+    transform: scale(0.8);
+    background-color: antiquewhite;
+}
+
+.signup-button:hover {
+    font-weight: 400;
+}
+
+.login-background {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(215, 228, 230, 0.383);
+    border-radius: 10%;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.login-title {
+    margin-top: 4%;
+    font-size: 40px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.login-username-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.login-username {
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    margin-top: 4.5%;
+}
+
+.login-username-box {
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 2%;
+    margin-left: 4%;
+    box-shadow: none;
+    height: 2em;
+    border: 1;
+    border-radius: 6px;
+    border-color: transparent;
+    background-color: white;
+    padding-left: 10px;
+}
+
+.login-password-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-password {
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 4.5%;
+    
+}
+
+.login-password-box {
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 2%;
+    margin-left: 4%;
+    box-shadow: none;
+    height: 2em;
+    border: 1;
+    border-radius: 6px;
+    border-color: transparent;
+    background-color: white;
+    padding-left: 10px;
+}
+
+.login-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-button {
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 8%;
+    border-radius: 10%;
+    text-align: center;
+    border-color: none;
+    background-color: transparent;
+}
+
+.login-button {
+    cursor: pointer;
+}
+
+.login-button:active {
+    transform: scale(0.8);
+    background-color: antiquewhite;
+}
+
+.login-button:hover {
+    font-weight: 400;
+}
+
+.demo-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.demo-button {
+    font-size: 25px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    margin-top: 8%;
+    border-radius: 4%;
+    text-align: center;
+    border-color: none;
+    background-color: transparent;
+}
+
+.demo-button:active {
+    transform: scale(0.8);
+    background-color: antiquewhite;
+}
+
+.demo-button:hover {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+.error-exclamation {
+    color: red;
+}
+
+.errors {
+    color: red;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

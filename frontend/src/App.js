@@ -1,10 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { Switch } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from './components/routes/routes'
+import Landing from './components/landing/landing'
+import LoginForm from './components/authforms/LoginForm';
+import NavBar from './components/navbar/navbar';
+import signup from './components/authforms/signup';
 function App() {
   return (
    <>
-   Kenny
+   <NavBar/>
+   <Switch>
+      <AuthRoute exact path ='/login' component={LoginForm} />
+      <AuthRoute exact path ='/signup' component={signup} />
+      <ProtectedRoute exact path='/landing' component={Landing} />
+   </Switch>
+
    </>
   );
 }
