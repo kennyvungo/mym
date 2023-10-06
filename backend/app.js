@@ -7,7 +7,8 @@ const cors = require('cors');
 const csurf = require('csurf');
 const { isProduction } = require('./config/keys');
 require('./models/user')
-
+require('./config/passport'); 
+const passport = require('passport'); 
 // Express Routers
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/api/users');
@@ -15,6 +16,7 @@ const csrfRouter = require('./routes/api/csrf');
 
 const app = express();
 
+app.use(passport.initialize());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
