@@ -29,7 +29,7 @@ function LoginForm () {
 
   const handleDemoSignIn = async (e) => {
     e.preventDefault();
-    dispatch(login({ username: "demo-user" , password: "password" }))
+    dispatch(login({ username: "KNgo" , password: "password" }))
   };
 
 
@@ -37,10 +37,8 @@ function LoginForm () {
   return (
     <form className="session-form" onSubmit={handleSubmit}>
         <div className='login-background'>
-            <h2 className='login-title'>Log In</h2>
             <label>
                 <span className='login-username-container'>
-                    <span className='login-username'>Username</span>
                     <input className='login-username-box'type="text"
                     value={username}
                     onChange={update('username')}
@@ -50,7 +48,6 @@ function LoginForm () {
             </label>
             <label>
                 <span className='login-password-container'>
-                    <span className='login-password'>Password</span>
                     <input className='login-password-box' type="password"
                     value={password}
                     onChange={update('password')}

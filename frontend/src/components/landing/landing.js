@@ -28,16 +28,12 @@ const Landing = () => {
                 console.error("error")
             })
     },[])
-    const handleClick = async(e) =>{
-        e.preventDefault();
-        fetchData()
-    }
   return (
     <>
     <div>
         {today} 
         Today's Image
-        {data ? <img src={data.url}></img> : <> </>
+        {data ? <img src={data.url} alt="astronomy photo"></img> : <> </>
     }
     </div>
 
