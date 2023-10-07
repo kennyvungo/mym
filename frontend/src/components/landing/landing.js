@@ -20,7 +20,13 @@ const Landing = () => {
     const [data,setData] = useState(null);
     let today = new Date().toLocaleDateString()
     useEffect(() => {
-        setData(fetchData())
+        fetchData()
+            .then(result => {
+                setData(result)
+            })
+            .catch(error => {
+                console.error("error")
+            })
     },[])
     const handleClick = async(e) =>{
         e.preventDefault();
@@ -30,9 +36,9 @@ const Landing = () => {
     <>
     <div>
         {today} 
-        {JSON.stringify(data)}
         Today's Image
-        <button onClick={handleClick}>CLick here</button>
+        {data ? <img src={data.url}></img> : <> </>
+    }
     </div>
 
     </>
