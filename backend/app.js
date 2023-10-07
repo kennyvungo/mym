@@ -13,7 +13,7 @@ const passport = require('passport');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/api/users');
 const csrfRouter = require('./routes/api/csrf');
-
+const imageRouter = require('./routes/api/images')
 const app = express();
 
 app.use(passport.initialize());
@@ -40,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/csrf', csrfRouter);
+app.use('/api/image',imageRouter)
 
 app.use((req, res, next) => {
     const err = new Error('Not Found');
