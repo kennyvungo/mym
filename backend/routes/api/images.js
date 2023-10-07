@@ -14,7 +14,7 @@ const nasaKey = process.env.NASA_API_KEY;
                 },
                 });
                 let apoddata = response.data;
-                res.json(apoddata);
+                return res.json(apoddata);
             } catch (error) {
                 res.status(500).json({ error: 'An error occurred while fetching data from the NASA API.' });
             }
