@@ -25,7 +25,9 @@ app.use(cookieParser());
 //     app.use(cors());
 // }
 
-app.use(cors());
+app.use(cors({
+    origin: "https://mym-client-nine.vercel.app",
+}));
 
 // app.use(
 //     csurf({
