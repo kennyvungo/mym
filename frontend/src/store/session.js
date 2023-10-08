@@ -23,7 +23,7 @@ export const clearSessionErrors = () => ({
 });
 
 export const signup = user => startSession(user, 'api/users/register');
-export const login = user => startSession(user, 'api/users/login');
+export const login = user => startSession(user, 'https://mym-api-gamma.vercel.app/api/users/login');
 
 const startSession = (userInfo, route) => async dispatch => {
     try {  
