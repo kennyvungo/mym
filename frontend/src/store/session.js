@@ -29,6 +29,9 @@ const startSession = (userInfo, route) => async dispatch => {
     try {  
     const res = await jwtFetch(route, {
         method: "POST",
+        headers: {
+            'Content-Type':'application/json'
+        },
         body: JSON.stringify(userInfo)
     });
     const { user, token } = await res.json();
