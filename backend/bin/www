@@ -25,7 +25,7 @@ app.set('port', port);
 var server = http.createServer(app);
 let mongooseConnect = async () => {
   mongoose
-  .connect(db, { useNewUrlParser: true })
+  .connect(db)
   .then(() => {
     dbLogger("Connected to MongoDB successfully");
     server.listen(port);
