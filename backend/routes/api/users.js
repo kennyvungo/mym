@@ -14,10 +14,9 @@ router.get('/', function(req, res, next) {
     message:"GET /api/users"
   })
 });
-router.post('/test', function(req, res, next) {
-  res.json({
-    message:"POST /api/test"
-  })
+router.get('/test', async (req, res) => {
+  const users = await User.exists()
+  return res.json(users)
 });
 router.get('/current', restoreUser, (req, res) => {
   if (!isProduction) {
@@ -38,9 +37,6 @@ router.post('/register', async (req, res, next) => {
   const user = await User.findOne({
     username: req.body.username 
   });
-  return res.json({
-    message:"POST /api/test"
-  })
   const err = new Error("Validation Error");
   const errors = {};
   if (req.body.password.length < 6) {
@@ -88,9 +84,6 @@ router.post('/login', async (req, res, next) => {
       err.errors = { username: "Invalid credentials" };
       return next(err);
     }
-    return res.json({
-      message:"Kenny kenny kenny"
-    })
     return res.status(200).json(await loginUser(user));
   })(req, res, next);
 });
