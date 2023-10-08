@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
     message:"GET /api/users"
   })
 });
-router.get('/test', function(req, res, next) {
+router.post('/test', function(req, res, next) {
   res.json({
     message:"POST /api/test"
   })
