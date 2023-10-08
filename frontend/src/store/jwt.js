@@ -13,12 +13,12 @@ async function jwtFetch(url, options = {}) {
 
     const jwtToken = localStorage.getItem("jwtToken");
     if (jwtToken) options.headers["Authorization"] = 'Bearer ' + jwtToken;
-    
-    // if (options.method.toUpperCase() !== "GET") {
-    //     options.headers["Content-Type"] =
-    //         options.headers["Content-Type"] || "application/json";
-    //     options.headers["CSRF-Token"] = getCookie("CSRF-TOKEN");
-    // }
+
+    if (options.method.toUpperCase() !== "GET") {
+        options.headers["Content-Type"] =
+            options.headers["Content-Type"] || "application/json";
+        options.headers["CSRF-Token"] = getCookie("CSRF-TOKEN");
+    }
 
     const res = await fetch(url, options);
     if (res.status >= 400) throw res;
