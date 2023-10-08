@@ -21,19 +21,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-if (!isProduction) {
+if (isProduction) {
     app.use(cors());
 }
-else{
-
-    app.use(cors(
-        {
-            origin: ["https://mym-client-nine.vercel.app/"],
-            methods:["POST","GET"],
-            credentials: true
-        }
-        ))
- }
 app.use(
     csurf({
         cookie: {
