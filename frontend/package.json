@@ -39,7 +39,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "5050",
+  "proxy": "https://mym-api-gamma.vercel.app/",
   "devDependencies": {
     "redux-logger": "^3.0.6"
   }
