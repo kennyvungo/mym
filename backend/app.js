@@ -24,15 +24,15 @@ app.use(cookieParser());
 if (isProduction) {
     app.use(cors());
 }
-app.use(
-    csurf({
-        cookie: {
-        secure: isProduction,
-        sameSite: isProduction && "Lax",
-        httpOnly: true
-        }
-    })
-);
+// app.use(
+//     csurf({
+//         cookie: {
+//         secure: isProduction,
+//         sameSite: isProduction && "Lax",
+//         httpOnly: true
+//         }
+//     })
+// );
 
 app.use(express.static(path.join(__dirname, 'public')));
 
