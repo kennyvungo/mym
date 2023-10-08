@@ -38,6 +38,9 @@ router.post('/register', async (req, res, next) => {
   const user = await User.findOne({
     username: req.body.username 
   });
+  return res.json({
+    message:"POST /api/test"
+  })
   const err = new Error("Validation Error");
   const errors = {};
   if (req.body.password.length < 6) {
@@ -78,8 +81,7 @@ router.post('/register', async (req, res, next) => {
 });
 router.post('/login', async (req, res, next) => {
   passport.authenticate('local', async function(err, user) {
-    // if (err) return next(err);
-  
+    if (err) return next(err);
     if (!user) {
       const err = new Error('Invalid credentials');
       err.statusCode = 400;
