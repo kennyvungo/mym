@@ -24,13 +24,13 @@ app.use(cookieParser());
 if (!isProduction) {
     app.use(cors());
 }
-// app.use(cors(
-//     {
-//         origin: ["https://mym-api-gamma.vercel.app/"],
-//         methods:["POST","GET"],
-//         credentials: true
-//     }
-// ))
+app.use(cors(
+    {
+        origin: ["https://mym-api-gamma.vercel.app/"],
+        methods:["POST","GET"],
+        credentials: true
+    }
+))
 app.use(
     csurf({
         cookie: {
