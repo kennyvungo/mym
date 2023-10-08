@@ -17,6 +17,7 @@ router.get('/', function(req, res, next) {
 router.get('/test', async (req, res) => {
   const users = await User.exists()
   return res.json(users)
+  
 });
 router.get('/current', restoreUser, (req, res) => {
   if (!isProduction) {
