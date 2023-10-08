@@ -26,7 +26,7 @@ if (!isProduction) {
 }
 app.use(cors(
     {
-        origin: ["https://mym-api-gamma.vercel.app/"],
+        origin: ["https://mym-client-nine.vercel.app/"],
         methods:["POST","GET"],
         credentials: true
     }
