@@ -3,7 +3,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const debug = require('debug');
-const cors = require('cors');
+// const cors = require('cors');
 const csurf = require('csurf');
 const { isProduction } = require('./config/keys');
 require('./models/user')
@@ -21,13 +21,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-if (!isProduction) {
-    app.use(cors( {
-        origin: ["https://mym-client-nine.vercel.app/"],
-        methods:["POST","GET"],
-        credentials: true
-    }));
-}
+// if (!isProduction) {
+//     app.use(cors( {
+//         origin: ["https://mym-client-nine.vercel.app/"],
+//         methods:["POST","GET"],
+//         credentials: true
+//     }));
+// }
 // app.use(cors(
 //     {
 //         origin: ["https://mym-client-nine.vercel.app/"],
