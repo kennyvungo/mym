@@ -78,9 +78,6 @@ router.post('/register',validateRegisterInput, async (req, res, next) => {
   });
 });
 router.post('/login',validateLoginInput, async (req, res, next) => {
-  return res.json({
-    message:"Kenny kenny kenny"
-  })
   passport.authenticate('local', async function(err, user) {
     if (err) return next(err);
     if (!user) {
@@ -89,6 +86,9 @@ router.post('/login',validateLoginInput, async (req, res, next) => {
       err.errors = { username: "Invalid credentials" };
       return next(err);
     }
+    return res.json({
+      message:"Kenny kenny kenny"
+    })
     return res.status(200).json(await loginUser(user));
   })(req, res, next);
 });
