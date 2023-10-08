@@ -15,6 +15,11 @@ router.get('/', function(req, res, next) {
     message:"GET /api/users"
   })
 });
+router.get('/test', function(req, res, next) {
+  res.json({
+    message:"POST /api/test"
+  })
+});
 router.get('/current', restoreUser, (req, res) => {
   if (!isProduction) {
     // In development, allow React server to gain access to the CSRF token
