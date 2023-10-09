@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const mongoose = require("mongoose");
 const logger = require('morgan');
 const debug = require('debug');
 const cors = require('cors');
@@ -14,6 +15,7 @@ const usersRouter = require('./routes/api/users');
 const csrfRouter = require('./routes/api/csrf');
 const imageRouter = require('./routes/api/images')
 const app = express();
+const { MONGODB_URI} = process.env;
 
 app.use(passport.initialize());
 app.use(logger('dev'));
@@ -24,6 +26,16 @@ app.use(cookieParser());
 // if (isProduction) {
 //     app.use(cors());
 // }
+mongoose.connect("mongodb+srv://vercel-admin-user:7hhi9wUlO9cfQ2eh@mym.hmilmcj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+  })
+  .then(() => {
+    console.log("MongoDB is connected successfully");
+  })
+  .catch((err) => {
+    console.error("Error connecting to MongoDB:", err);
+    process.exit(1); // Exit the application with an error code
+  });
+  
 
 app.use(cors({
     origin: "*",
