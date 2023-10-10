@@ -14,13 +14,14 @@ import Archive from './components/archive/archive';
 function App() {
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getCurrentUser()).then(() => setLoaded(true));
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getCurrentUser()).then(() => setLoaded(true));
+  // }, [dispatch]);
   return (
    <>
    <NavBar/>
    <Switch>
+      <AuthRoute exact path ='/' component={LoginForm} />
       <AuthRoute exact path ='/login' component={LoginForm} />
       <AuthRoute exact path ='/signup' component={signup} />
       <ProtectedRoute exact path='/images' component={Archive}/>
@@ -30,5 +31,4 @@ function App() {
    </>
   );
 }
-
 export default App;

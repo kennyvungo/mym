@@ -37,6 +37,7 @@ function LoginForm () {
   return (
     <form className="session-form" onSubmit={handleSubmit}>
         <div className='login-background'>
+          <h2 className='login-title'>Log In</h2>
             <label>
                 <span className='login-username-container'>
                     <input className='login-username-box'type="text"

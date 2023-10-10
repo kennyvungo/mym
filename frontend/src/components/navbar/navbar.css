@@ -4,11 +4,57 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    justify-content: flex-end;
 }
 .links-auth{
     height: 10vh;
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
+}
+.logout-button {
+    font-size: 20px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    border-radius: 15%;
+    text-align: center;
+    border-color: none;
+    background-color: #eeeeee;
+    padding: 10px;
+    cursor: pointer;
+    margin: 20px
+}
+.logout-button:hover{
+    background-color: lightgray;
+}
+.sign-button {
+    font-size: 20px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    border-radius: 15%;
+    text-align: center;
+    border-color: none;
+    background-color: #eeeeee;
+    padding: 10px;
+    cursor: pointer;
+    margin: 20px
+}
+.sign-button:hover{
+    background-color: lightgray;
+}
+.log-button {
+    font-size: 20px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 300;
+    border-radius: 15%;
+    text-align: center;
+    border-color: none;
+    background-color: #eeeeee;
+    padding: 10px;
+    cursor: pointer;
+    margin: 20px
+}
+.log-button:hover{
+    background-color: lightgray;
 }

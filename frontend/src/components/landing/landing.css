@@ -1,0 +1,27 @@
+.landing-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+    background-color: lightblue;
+    font-weight: 300;
+    height: 90vh;
+}
+.image-container{
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.space-image{
+    width: 700px;
+    height: 700px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.explanation{
+    margin-right: 100px;
+}

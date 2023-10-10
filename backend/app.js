@@ -26,16 +26,7 @@ app.use(cookieParser());
 // if (isProduction) {
 //     app.use(cors());
 // }
-mongoose.connect("mongodb+srv://vercel-admin-user:7hhi9wUlO9cfQ2eh@mym.hmilmcj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
-  })
-  .then(() => {
-    console.log("MongoDB is connected successfully");
-  })
-  .catch((err) => {
-    console.error("Error connecting to MongoDB:", err);
-    process.exit(1); // Exit the application with an error code
-  });
-  
+
 
 app.use(cors({
     origin: "*",

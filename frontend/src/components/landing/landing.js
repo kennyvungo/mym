@@ -1,6 +1,7 @@
 import React from 'react'
 import jwtFetch from '../../store/jwt'
 import { useEffect,useState } from 'react'
+import './landing.css'
 const fetchData = async () => {
     try{
         const response = await jwtFetch('/api/image',{
@@ -30,11 +31,18 @@ const Landing = () => {
     },[])
   return (
     <>
-    <div>
-        {today} 
-        Today's Image
-        {data ? <img src={data.url} alt="astronomy photo"></img> : <> </>
-    }
+    <div className='landing-container'>
+        {today}  Today's Image
+        {data ? 
+        <div className='image-container'> 
+
+        <img className='space-image' src={data.url} alt="astronomy photo"></img> 
+            <div className='explanation'>
+            {data.explanation}    
+            </div>
+        </div>
+        
+        : <> </>}
     </div>
 
     </>
