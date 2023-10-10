@@ -55,7 +55,10 @@ export const getCurrentUser = () => async dispatch => {
     const user = await res.json();
     return dispatch(receiveCurrentUser(user));
 };
-
+export const googleAuth = () => async dispatch => {
+    const res = await jwtFetch('/google/auth');
+    const user = await res.json();
+}
 const nullErrors = null;
 
 export const sessionErrorsReducer = (state = nullErrors, action) => {

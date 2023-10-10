@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import './authform.css';
 // import { FaExclamation } from "react-icons/fa"
 
-import { login, clearSessionErrors } from '../../store/session';
+import { login, clearSessionErrors,googleAuth } from '../../store/session';
 
 function LoginForm () {
   const [username, setUsername] = useState('');
@@ -32,6 +32,9 @@ function LoginForm () {
     dispatch(login({ username: "KNgo" , password: "password" }))
   };
 
+  const handleGoogleAuth = async (e) => {
+    dispatch(googleAuth)
+  }
 
 
   return (
@@ -71,6 +74,9 @@ function LoginForm () {
 
             <div className="demo-button-container" onClick={handleDemoSignIn}>
                 <button className='demo-button'>Sign In With Demo </button>
+            </div>
+            <div className="demo-button-container" onClick={handleGoogleAuth}>
+              <button className='demo-button'>Sign In With Google</button>
             </div>
         </div>
     </form>

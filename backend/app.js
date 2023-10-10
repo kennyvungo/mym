@@ -47,7 +47,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/users', usersRouter);
 app.use('/api/csrf', csrfRouter);
 app.use('/api/image',imageRouter)
-
+app.get('/auth/google',
+  passport.authenticate('google', { scope: [ 'email', 'profile' ] }
+));
+app.get( '/auth/google/callback',
+  passport.authenticate( 'google', {
+    successRedirect: '/protected',
+    failureRedirect: '/auth/google/failure'
+  })
+);
+app.get('/auth/google/failure', (req, res) => {
+    res.send('Failed to authenticate..');
+  });
 app.use((req, res, next) => {
     const err = new Error('Not Found');
     err.statusCode = 404;

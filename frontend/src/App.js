@@ -24,7 +24,6 @@ function App() {
       <AuthRoute exact path ='/' component={LoginForm} />
       <AuthRoute exact path ='/login' component={LoginForm} />
       <AuthRoute exact path ='/signup' component={signup} />
-      <ProtectedRoute exact path='/images' component={Archive}/>
       <ProtectedRoute exact path='/landing' component={Landing} />
    </Switch>
 

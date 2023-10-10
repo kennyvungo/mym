@@ -6,6 +6,7 @@ const User = mongoose.model('user');
 const jwt = require('jsonwebtoken');
 const { secretOrKey } = require('./keys');
 const { Strategy: JwtStrategy, ExtractJwt } = require('passport-jwt');
+const GoogleStrategy = require('passport-google-oauth2').Strategy;
 const options = {};
 options.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 options.secretOrKey = secretOrKey;
@@ -24,6 +25,27 @@ passport.use(new JwtStrategy(options, async (jwtPayload, done) => {
     done(err);
   }
 }));
+
+const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
+
+passport.use(new GoogleStrategy({
+  clientID: process.env.GOOGLE_CLIENT_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  callbackURL: "http://localhost:5050/auth/google/callback",
+  passReqToCallback: true,
+},
+function(request, accessToken, refreshToken, profile, done) {
+  return done(null, profile);
+}));
+
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+  done(null, user);
+});
 exports.requireUser = passport.authenticate('jwt', { session: false });
 exports.restoreUser = (req, res, next) => {
     return passport.authenticate('jwt', { session: false }, function(err, user) {
